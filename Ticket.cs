@@ -38,10 +38,10 @@ namespace OOP_ass01
         //b.ApplyDiscount() — receives a discountAmount (double) . If discount is valid (> 0 and ≤ Price), deducts it from Price and sets discountAmount to 0 (consumed). Otherwise, the discount stays unchanged.
         //c.PrintTicket() — prints the full ticket info.
 
-        public void CalcTotal()
+        public double CalcTotal()
         {
             double total = Price + Price * 0.14;
-            Console.WriteLine($"{total}{2f}");
+            return total;
         }
 
         public void ApplyDiscount()
@@ -59,9 +59,9 @@ namespace OOP_ass01
 
             Console.WriteLine($"Movie Name : {MovieName}");
             Console.WriteLine($"Type       : {Type}");
-            Console.WriteLine($"Seat       : {Seat.seatInfo}");
+            Console.WriteLine($"Seat       : {Seat.Number}{Seat.Row}");
             Console.WriteLine($"Price      : {Price}");
-            Console.WriteLine($"Total (14% tax) : {CalcTotal}");
+            Console.WriteLine($"Total (14% tax) : {CalcTotal()}");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("============== After Discount ==============");
